@@ -1,9 +1,11 @@
 # dotfiles
-My .dotfiles
+## My .dotfiles
 
-
-
-
+### git
 ### neovim 
 ### tmux
-### git
+
+## Setup
+Run:
+$ ./install.sh
+
