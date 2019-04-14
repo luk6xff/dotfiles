@@ -1,9 +1,8 @@
 # dotfiles
 ## My .dotfiles
-
-### git
-### neovim 
-### tmux
+-> git
+-> neovim 
+-> tmux
 
 ## Setup
 Run:
