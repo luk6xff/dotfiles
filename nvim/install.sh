@@ -5,7 +5,7 @@ chmod u+x nvim.appimage
 
 THIS_DIR=`dirname "$(readlink -f "$0")"`
 
-ln -sfT $THIS_DIR/* ~/.config/nvim
+ln -sf $THIS_DIR/* ~/.config/nvim
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
