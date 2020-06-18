@@ -1,4 +1,4 @@
 nvim/plugged/*
 nvim_others/*
-nvim/nvim.appimage
+nvim/nvim/*
 nvim/undodir/*

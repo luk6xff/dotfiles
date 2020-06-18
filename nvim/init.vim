@@ -52,33 +52,19 @@ Plug 'rust-lang/rust.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-markdown'
-Plug 'vim-scripts/nginx.vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Raimondi/delimitMate'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mhinz/vim-startify'
-Plug 'vim-scripts/nginx.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
-
-let g:javascript_plugin_jsdoc           = 1
-let g:javascript_conceal_function       = "ƒ"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_arrow_function = "⇒"
-let g:javascript_conceal_return         = "⇚"
-
-let g:jsx_ext_required = 0
 
 let g:syntastic_check_on_open=1
 
@@ -91,11 +77,6 @@ let g:ycm_autoclose_preview_window_after_completion=1
 
 set foldmethod=indent
 set foldlevel=99
-
-au BufRead,BufNewFile *.nginx set ft=nginx
-au BufRead,BufNewFile */etc/nginx/* set ft=nginx
-au BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
-au BufRead,BufNewFile nginx.conf set ft=nginx
 
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing

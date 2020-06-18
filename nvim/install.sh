@@ -1,11 +1,13 @@
 #!/bin/sh
 
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-chmod u+x nvim.appimage
+# Install neovim
+sudo apt install python3-dev
+sudo apt install cmake
+sudo apt install neovim
 
 THIS_DIR=`dirname "$(readlink -f "$0")"`
-
-ln -sf $THIS_DIR/* ~/.config/nvim
+echo $THIS_DIR
+ln -sf $THIS_DIR/ ~/.config/nvim
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -14,9 +16,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ln -sf ~/.config/nvim/init.vim ~/.vimrc
 
 echo 'Open neovim and run command :PlugInstall'
+sleep 2
 nvim
 
-# python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --all
-python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --racer-completer --tern-completer 
+python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --racer-completer --tern-completer
 
 echo 'NVIM config done!'
