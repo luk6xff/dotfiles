@@ -1,0 +1,94 @@
+{
+    // Editor configuration
+    "editor.fontSize": 14,
+
+    "editor.fontLigatures": true,
+
+    "editor.tabSize": 4,
+
+    "editor.bracketPairColorization.enabled": true,
+
+    "editor.minimap.enabled": false,
+
+    "editor.renderWhitespace": "all",
+
+    "editor.detectIndentation": true,
+
+    "editor.wordWrap": "on", // or "wordWrapColumn": 120
+
+    "editor.wordWrapColumn": 120,
+
+    "editor.cursorSmoothCaretAnimation": "on",
+
+    "editor.formatOnSave": false,
+
+    "editor.smoothScrolling": true,
+
+    "terminal.integrated.fontSize": 14,
+
+    "debug.console.fontSize": 14,
+
+    "files.trimTrailingWhitespace": true,
+
+    "files.insertFinalNewline": true,
+
+    "search.useIgnoreFiles": false,
+
+    "window.zoomLevel": -1,
+
+
+    // Explorer
+    "explorer.excludeGitIgnore": false,
+
+    "explorer.confirmDelete": true,
+
+    "explorer.confirmDragAndDrop": false,
+
+
+    // Workbench
+    "workbench.colorTheme": "Default Dark Modern",
+
+    "workbench.startupEditor": "newUntitledFile",
+
+    "workbench.list.horizontalScrolling": true,
+
+    "workbench.sideBar.location": "left",
+
+    "workbench.tree.indent": 20,
+
+    "workbench.enableExperiments": false,
+
+    "workbench.list.smoothScrolling": true,
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#29d629af",
+        "activityBar.background": "#223e22af",
+        "focusBorder": "#29d629af",
+        "widget.border": "#29d629af",
+    },
+
+
+    // Git
+    "git.confirmSync": false,
+
+    "git.autorefresh": false,
+
+    "diffEditor.renderSideBySide": true,
+
+    "git.openRepositoryInParentFolders": "always",
+
+
+    // Telemetry & Updates
+    "telemetry.telemetryLevel": "off",
+
+    "update.mode": "default",
+
+    "update.showReleaseNotes": true,
+
+
+    // Extensions
+    "extensions.autoUpdate": true,
+
+    "extensions.autoCheckUpdates": true,
+
+    "extensions.ignoreRecommendations": true,
+}
