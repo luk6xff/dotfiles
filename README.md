@@ -1,9 +1,10 @@
 # dotfiles
 ## My .dotfiles
 * git
-* neovim 
+* neovim
 * tmux
 * vscode
+* other utilities
 
 ## Setup
 Run:
