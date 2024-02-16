@@ -3,6 +3,7 @@
 * git
 * neovim 
 * tmux
+* vscode
 
 ## Setup
 Run:
