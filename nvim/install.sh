@@ -2,10 +2,19 @@
 
 echo "Start installing neovim..."
 
-sudo snap install nvim
+#sudo apt install -y neovim
+#sudo snap install nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+#./nvim.appimage
+sudo mkdir -p /opt/nvim
+sudo mv nvim.appimage /opt/nvim/nvim
+echo "export PATH=\$PATH:/opt/nvim/" >> ~/.bashrc
+source ~/.bashrc
+
 
 # Backup default configs
-mv ~/.config/nvim{,.bak}
+mv ~/.config/nvim ~/.config/nvim.bak
 
 # Install LazyVim starter
 git clone https://github.com/LazyVim/starter ~/.config/nvim

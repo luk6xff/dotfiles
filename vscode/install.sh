@@ -1,9 +1,10 @@
 #!/bin/sh
 
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+
 # vscode
 sudo apt install -y code
+# or 
 #sudo snap install code --classic
-
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 ln -sfT ${SCRIPT_DIR}/settings.json ~/.config/Code/User/settings.json

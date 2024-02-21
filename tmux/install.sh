@@ -1,13 +1,13 @@
 #!/bin/sh
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 # Clear all config if exists
 rm -rf ~/.tmux
 rm -f ~/.tmux.conf
 
 # Install tmux
-sudo apt install tmux
+sudo apt install -y tmux
 
 ln -sfT ${SCRIPT_DIR}/.tmux.conf ~/.tmux.conf
 
