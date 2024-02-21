@@ -2,6 +2,12 @@
 
 echo "Download, install and configure all the other tools..."
 
+# docker
+sudo apt install -y docker.io
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+sudo chmod 666 /var/run/docker.sock
+
 # minicom
 sudo apt install -y minicom
 sudo usermod -a -G tty $USER

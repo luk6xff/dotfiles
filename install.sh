@@ -11,14 +11,18 @@ cd ~ && chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
 
 
 # Find the location of this file and the dotfile repo directory.
-DOTFILES=`dirname "$(readlink -f "$0")"`
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+echo "Script directory: $SCRIPT_DIR"
 
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+echo "Script directory: $SCRIPT_DIR"
 # Simply invoke the install script from each section of this repo.
-dirs=$(find $DOTFILES -maxdepth 1 -mindepth 1 -type d -not -name '.git' -print)
-for dir in $dirs
-do
-  echo "Start installing ${dir}..."
-  $dir/install.sh
-done
+dirs=$(find ${SCRIPT_DIR} -type d -not -name '.git' -print)
+#echo "All available dirs to be installed: ${dirs}"
+# for dir in $dirs
+# do
+#   echo "Start installing ${dir}..."
+#   ${dir}/install.sh
+# done
 
 echo "The machine is ready to use!"

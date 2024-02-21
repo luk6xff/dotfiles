@@ -4,6 +4,6 @@
 sudo apt install -y code
 #sudo snap install code --classic
 
-THIS_DIR=`dirname "$(readlink -f "$0")"`
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-ln -sfT $THIS_DIR/settings.json ~/.config/Code/User/settings.json
+ln -sfT ${SCRIPT_DIR}/settings.json ~/.config/Code/User/settings.json
