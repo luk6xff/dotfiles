@@ -2,24 +2,13 @@
 
 echo "Start installing neovim..."
 
-# Install neovim
-sudo apt install -y curl
-sudo apt install -y neovim
+sudo snap install nvim
 
-THIS_DIR=`dirname "$(readlink -f "$0")"`
-echo $THIS_DIR
-ln -sf $THIS_DIR/ ~/.config/nvim
+# Backup default configs
+mv ~/.config/nvim{,.bak}
 
-sh -c 'curl -fLo "~/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Install LazyVim starter
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
-# Optional, if you still use vim
-ln -sf ~/.config/nvim/init.vim ~/.vimrc
-
-echo 'Open neovim and run command :PlugInstall'
-sleep 2
-nvim
-
-python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --racer-completer --tern-completer
-
-echo 'NVIM config done!'
+echo 'NVIM config done, Open neovim and run :LazyHealth to see if everything works fine'

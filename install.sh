@@ -4,7 +4,7 @@
 echo "Start setting up my machine..."
 
 ## Generate sshkeys
-ssh-keygen -t rsa -b 4096 -C "lukasz.uszko@gmail.com"
+#ssh-keygen -t rsa -b 4096 -C "lukasz.uszko@gmail.com"
 #cat ~/.ssh/id_rsa.pub > https://github.com/settings/keys
 # Update permissions
 cd ~ && chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
