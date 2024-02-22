@@ -2,6 +2,17 @@
 
 echo "Download, install and configure all the other tools..."
 
+sudo apt update
+
+# gcc build essentials
+sudo apt install -y build-essential
+
+# clang
+sudo apt install -y clang
+
+# cmake
+sudo apt install -y cmake
+
 # docker
 sudo apt install -y docker.io
 sudo groupadd docker
