@@ -12,7 +12,6 @@ sudo mv nvim.appimage /opt/nvim/nvim
 echo "export PATH=\$PATH:/opt/nvim/" >> ~/.bashrc
 source ~/.bashrc
 
-
 # Backup default configs
 mv ~/.config/nvim ~/.config/nvim.bak
 
