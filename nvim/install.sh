@@ -10,6 +10,7 @@ chmod u+x nvim.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim.appimage /opt/nvim/nvim
 echo "export PATH=\$PATH:/opt/nvim/" >> ~/.bashrc
+echo "export PATH=\$PATH:/opt/nvim/" >> ~/.zshrc
 source ~/.bashrc
 
 # Backup default configs
