@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 ## Bindkeys
-bindkey '\t' end-of-line
+#bindkey '\t' end-of-line
 
 ## History setup
 HISTFILE=$HOME/.zsh_history
