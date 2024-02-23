@@ -11,7 +11,9 @@
 
 ## Setup
 Run:
+```sh
 $ ./install.sh
+```
 
 ## Look
-[TerminalLook](look.png)
+![](img/img.png)
