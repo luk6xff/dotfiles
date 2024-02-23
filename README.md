@@ -4,9 +4,14 @@
 * neovim
 * tmux
 * vscode
-* other utilities
+* zsh
+* tools
+* rust
+
 
 ## Setup
 Run:
 $ ./install.sh
 
+## Look
+[TerminalLook](look.png)
