@@ -28,7 +28,11 @@ sudo usermod -a -G dialout $USER
 sudo apt install -y mc
 
 # vlc
-sudo apt install -y vlc
+#sudo apt install -y vlc
+
+# imhex
+wget https://github.com/WerWolv/ImHex/releases/download/v1.33.0/imhex-1.33.0-x86_64.AppImage -P ~/Tools/
+chmod +x ~/Tools/imhex-*.AppImage
 
 # sshpass
 sudo apt install -y sshpass
