@@ -8,7 +8,12 @@ echo "Script directory: $SCRIPT_DIR"
 echo "The script is going to work only on Debian based distros, Start setting up my machine..."
 
 # Generate sshkeys and update permissions
-#ssh-keygen -t rsa -b 4096 -C "lukasz.uszko@gmail.com"
+#ssh-keygen -t ed25519 -C "lukasz.uszko@gmail.com"
+# Prompt the user to enter their email
+read -p "Enter your email address for ssh-keygen: " email
+# Run ssh-keygen command with the provided email
+ssh-keygen -t ed25519 -C "$email"
+# Update permissions
 cd ~ && chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
 
 # Create a directory tree

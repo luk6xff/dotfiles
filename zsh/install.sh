@@ -26,7 +26,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ln -sfT ${SCRIPT_DIR}/.zshrc ~/.zshrc
 
 # Set shell to zsh
-#chsh -s $(which zsh)
-#source ~/zshrc
+chsh -s $(which zsh)
+source ~/zshrc
 
 echo "ZSH installed succesfully!"
