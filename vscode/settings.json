@@ -24,7 +24,7 @@
 
     "editor.smoothScrolling": true,
 
-    "editor.inlineSuggest.enabled": false, // code completion disabled by default
+    "editor.inlineSuggest.enabled": true, // code completion enabled by default
 
     "terminal.integrated.fontSize": 14,
 

@@ -46,5 +46,9 @@ sudo apt-get install -y htop
 # wireshark
 sudo apt install -y wireshark
 
+# gef
+git clone https://github.com/hugsy/gef.git ~/Tools/gef
+echo source ~/Tools/gef/gef.py >> ~/.gdbinit
 
-echo "All the tools installed correctly!"
+
+echo ">>> All the tools installed correctly!"
