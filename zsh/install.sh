@@ -24,6 +24,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Set .zshrc
 ln -sfT ${SCRIPT_DIR}/.zshrc ~/.zshrc
+ln -sfT ${SCRIPT_DIR}/.p10k.zsh ~/.p10k.zsh
 
 # Set shell to zsh
 chsh -s $(which zsh)
