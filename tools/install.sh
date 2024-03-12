@@ -13,6 +13,10 @@ sudo apt install -y clang
 # cmake
 sudo apt install -y cmake
 
+# flatpak
+sudo apt install -y flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # docker
 sudo apt install -y docker.io
 sudo groupadd docker
@@ -36,6 +40,9 @@ chmod +x ~/Tools/imhex-*.AppImage
 
 # sshpass
 sudo apt install -y sshpass
+
+# kooha - screen recorder
+#flatpak install flathub io.github.seadve.Kooha
 
 # flameshot
 sudo snap install -y flameshot

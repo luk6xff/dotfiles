@@ -20,6 +20,7 @@ ln -sfT ${SCRIPT_DIR}/settings.json ~/.config/Code/User/settings.json
 # extensions
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.cmake-tools
 code --install-extension eamodio.gitlens
 code --install-extension github.copilot
 code --install-extension rust-lang.rust-analyzer
