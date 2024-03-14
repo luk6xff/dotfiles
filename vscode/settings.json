@@ -80,6 +80,10 @@
     "git.openRepositoryInParentFolders": "always",
 
 
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+
     // Telemetry & Updates
     "telemetry.telemetryLevel": "off",
 
