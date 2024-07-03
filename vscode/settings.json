@@ -70,6 +70,12 @@
     },
 
 
+    // Exclude folders
+    "files.exclude": {
+        "**/.git": false
+    },
+
+
     // Git
     "git.confirmSync": false,
 
