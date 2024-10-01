@@ -86,6 +86,7 @@
   #############
   l = log --graph --all --decorate --oneline
   lg = log --graph --all --decorate --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(bold blue)<%an>' --abbrev-commit
+  lc = log --graph --decorate --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(bold blue)<%an>' --abbrev-commit
   #############
   ls = ls-files
   lsf = !git ls-files | grep -i
