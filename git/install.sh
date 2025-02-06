@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
-echo "Start installing GIT..."
+echo ">>> Start installing GIT..."
 
 # git
 sudo apt install -y git

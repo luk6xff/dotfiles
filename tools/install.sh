@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Download, install and configure all the other tools..."
+echo ">>> Start download, instalation and configure all the other needed TOOLS..."
 
 sudo apt update
 
