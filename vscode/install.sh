@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
+echo ">>> Start installing VSCODE..."
+
 # vscode
 sudo apt-get install -y wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -15,7 +17,7 @@ sudo apt install -y code
 #sudo snap install code --classic
 
 # settings
-ln -sfT ${SCRIPT_DIR}/settings.json ~/.config/Code/User/settings.json
+ln -sfT ${SCRIPT_DIR}/settings.json /home/${USER}/.config/Code/User/settings.json
 
 # extensions
 code --install-extension ms-python.python
@@ -23,6 +25,6 @@ code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode.cmake-tools
 code --install-extension ms-vscode-remote.remote-ssh
 #code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-#code --install-extension eamodio.gitlens
+code --install-extension eamodio.gitlens
 code --install-extension github.copilot
 code --install-extension rust-lang.rust-analyzer

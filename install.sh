@@ -1,32 +1,54 @@
 #!/bin/sh
+# ------------------------------------------------------------------
+# Author: luk6xff
+# Date: 2020.07.11
+#
+# Script for setting up the machine on Debian-based distributions.
+# ------------------------------------------------------------------
 
-# Find the location of this file and the dotfile repo directory.
+# Determine the directory of this script.
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
-echo "Script directory: $SCRIPT_DIR"
+echo ">>>>>> Script directory: $SCRIPT_DIR"
 
-# Hello message
-echo "The script is going to work only on Debian based distros, Start setting up my machine..."
+echo ">>>>>> This script is intended for Debian-based distros. Starting machine setup..."
 
-# Generate sshkeys and update permissions
-#ssh-keygen -t ed25519 -C "lukasz.uszko@gmail.com"
-# Prompt the user to enter their email
-read -p "Enter your email address for ssh-keygen: " email
-# Run ssh-keygen command with the provided email
-ssh-keygen -t ed25519 -C "$email"
-# Update permissions
-cd ~ && chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
+# Prompt user to generate SSH keys.
+read -p ">>>>>> Do you want to generate SSH keys for this machine? (y/N): " generate_keys
 
-# Create a directory tree
-mkdir -p ~/Projects
-mkdir -p ~/Tools
+if [ "$generate_keys" = "y" ] || [ "$generate_keys" = "Y" ]; then
+  # Prompt for the email address to use in the SSH key comment.
+  read -p ">>>>>> Enter your email address for ssh-keygen: " email
+  ssh-keygen -t ed25519 -C "$email"
 
-# Simply invoke the install script from each section of this repo.
-dirs=$(find ${SCRIPT_DIR} -maxdepth 1 -mindepth 1 -type d -not -name '.git' -print)
-echo "All available dirs to be installed: ${dirs}"
-for dir in $dirs
-do
-  echo "Start installing ${dir}..."
-  ${dir}/install.sh
+  # Update permissions for the SSH directory and its files.
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/*
+  chmod 644 ~/.ssh/*.pub
+else
+  echo ">>>>>> Skipping SSH key generation."
+fi
+
+# Create directory tree.
+mkdir -p ~/Projects ~/Tools
+
+# Find subdirectories (excluding .git) and run their install.sh scripts.
+dirs=$(find "$SCRIPT_DIR" -maxdepth 1 -mindepth 1 -type d -not -name '.git')
+echo ">>>>>> Available directories to install:"
+echo "$dirs"
+
+for dir in $dirs; do
+  if [ -x "${dir}/install.sh" ]; then
+    echo ">>>>>> Running install script in ${dir}..."
+    "${dir}/install.sh"
+  else
+    echo ">>>>>> No executable install.sh found in ${dir}, skipping."
+  fi
 done
 
-echo "The machine is ready to use!"
+
+# Set shell to zsh
+echo ">>>>>> Switching shell to zsh (You must log out from your user session and log back in to see this change)..."
+chsh -s $(which zsh)
+
+echo ">>>>>> The machine is ready to use!"
+

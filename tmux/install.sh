@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
+echo ">>> Start installing TMUX..."
+
 # Clear all config if exists
 rm -rf ~/.tmux
 rm -f ~/.tmux.conf

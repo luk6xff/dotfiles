@@ -35,14 +35,11 @@ sudo apt install -y mc
 #sudo apt install -y vlc
 
 # imhex
-wget https://github.com/WerWolv/ImHex/releases/download/v1.33.0/imhex-1.33.0-x86_64.AppImage -P ~/Tools/
+wget https://github.com/WerWolv/ImHex/releases/download/v1.36.2/imhex-1.36.2-x86_64.AppImage -P ~/Tools/
 chmod +x ~/Tools/imhex-*.AppImage
 
 # sshpass
 sudo apt install -y sshpass
-
-# kooha - screen recorder
-#flatpak install flathub io.github.seadve.Kooha
 
 # flameshot
 sudo snap install -y flameshot

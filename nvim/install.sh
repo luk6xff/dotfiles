@@ -1,16 +1,17 @@
 #!/bin/sh
 
-echo "Start installing neovim..."
+echo ">>> Start installing NEOVIM + LAZYGIT..."
 
 # Install some utils
 sudo apt install -y curl
 
 # Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+
 #./nvim.appimage
 sudo mkdir -p /opt/nvim
-sudo mv nvim.appimage /opt/nvim/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 echo "export PATH=\$PATH:/opt/nvim/" >> ~/.bashrc
 echo "export PATH=\$PATH:/opt/nvim/" >> ~/.zshrc
 
@@ -37,4 +38,4 @@ cd nerd-fonts/
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
-echo 'NVIM config done, Open neovim and run :LazyHealth to see if everything works fine'
+echo '>>> NVIM config done, Run: `nvim` and open `:LazyHealth` to see if everything works fine'
