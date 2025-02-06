@@ -17,7 +17,7 @@ work_scripts=$(ls work-*.sh 2>/dev/null)
 
 # If no scripts are found, exit.
 if [ -z "$work_scripts" ]; then
-  echo "No work-specific scripts (work-*.sh) found. Nothing to install."
+  echo ">>>> No work-specific scripts (work-*.sh) found. Nothing to install."
   exit 0
 fi
 
@@ -29,14 +29,14 @@ done
 
 # If only one script is found, run it automatically.
 if [ $count -eq 1 ]; then
-  echo "Found one work-specific script: $work_scripts"
-  echo "Running $work_scripts..."
-  sh "$work_scripts"
+  echo ">>>> Found one work-specific script: $work_scripts"
+  echo ">>>> Running $work_scripts..."
+  bash "$work_scripts"
   exit $?
 fi
 
 # If more than one script is found, list them and prompt the user.
-echo "Multiple work-specific scripts found. Please choose one to run:"
+echo ">>>> Multiple work-specific scripts found. Please choose one to run:"
 index=1
 for script in $work_scripts; do
   echo "  $index) $script"
@@ -44,7 +44,7 @@ for script in $work_scripts; do
 done
 
 # Prompt user for selection.
-printf "Enter the number of the script to run: "
+printf ">>>> Enter the number of the script to run: "
 read choice
 
 # Validate the selection and map it to the corresponding script.
@@ -59,10 +59,10 @@ for script in $work_scripts; do
 done
 
 if [ -z "$chosen" ]; then
-  echo "Invalid selection. Exiting."
+  echo ">>>> Invalid selection. Exiting."
   exit 1
 fi
 
-echo "Running $chosen..."
-sh "$chosen"
+echo ">>>> Running $chosen..."
+bash "$chosen"
 exit $?
