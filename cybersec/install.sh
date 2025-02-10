@@ -8,6 +8,8 @@ echo ">>> Start installing CYBERSEC stuff..."
 # Ghidra
 
 # Cutter
+wget https://github.com/rizinorg/cutter/releases/download/v2.3.4/Cutter-v2.3.4-Linux-x86_64.AppImage -P ~/Tools
+chmod +x ~/Tools/Cutter*
 
 # Pwntools
 
