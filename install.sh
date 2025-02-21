@@ -16,6 +16,7 @@ echo ">>>>>> This script is intended for Debian-based distros. Starting machine 
 read -p ">>>>>> Do you want to generate SSH keys for this machine? (y/N): " generate_keys
 
 if [ "$generate_keys" = "y" ] || [ "$generate_keys" = "Y" ]; then
+  mkdir -p ~/.ssh
   # Prompt for the email address to use in the SSH key comment.
   read -p ">>>>>> Enter your email address for ssh-keygen: " email
   ssh-keygen -t ed25519 -C "$email"

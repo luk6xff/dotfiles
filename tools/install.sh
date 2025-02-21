@@ -13,10 +13,6 @@ sudo apt install -y clang
 # cmake
 sudo apt install -y cmake
 
-# flatpak
-sudo apt install -y flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # docker
 sudo apt install -y docker.io
 sudo groupadd docker
