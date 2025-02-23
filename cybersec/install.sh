@@ -29,6 +29,14 @@ sudo apt install gdb-multiarch
 ### TOOLS ###
 cd ~/Tools
 
+# GEF
+git clone https://github.com/hugsy/gef.git ~/Tools/gef
+echo source ~/Tools/gef/gef.py >> ~/.gdbinit
+
+# Imhex
+wget https://github.com/WerWolv/ImHex/releases/download/v1.36.2/imhex-1.36.2-x86_64.AppImage -P ~/Tools/
+chmod +x ~/Tools/imhex-*.AppImage
+
 # Ghidra
 sudo apt install openjdk-21-jdk -y
 wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3.1_build/ghidra_11.3.1_PUBLIC_20250219.zip -P ~/Tools

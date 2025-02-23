@@ -30,10 +30,6 @@ sudo apt install -y mc
 # vlc
 #sudo apt install -y vlc
 
-# imhex
-wget https://github.com/WerWolv/ImHex/releases/download/v1.36.2/imhex-1.36.2-x86_64.AppImage -P ~/Tools/
-chmod +x ~/Tools/imhex-*.AppImage
-
 # sshpass
 sudo apt install -y sshpass
 
@@ -45,10 +41,6 @@ sudo apt-get install -y htop
 
 # wireshark
 sudo apt install -y wireshark
-
-# gef
-git clone https://github.com/hugsy/gef.git ~/Tools/gef
-echo source ~/Tools/gef/gef.py >> ~/.gdbinit
 
 
 echo ">>> All the tools installed correctly!"
