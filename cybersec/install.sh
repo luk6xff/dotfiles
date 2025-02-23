@@ -8,14 +8,21 @@ echo ">>> Start installing CYBERSEC stuff..."
 
 ### PYTHON PACKAGES ###
 cd ~/Projects
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 python3 -m venv venv
 source venv/bin/activate
 
 # Pwntools
-sudo apt-get update
-sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade pwntools
+python -m pip install --upgrade pip
+python -m pip install --upgrade pwntools
+
+
+
+### PACKAGES ###
+# GDB
+sudo apt install gdb
+sudo apt install gdb-multiarch
 
 
 
