@@ -42,5 +42,8 @@ sudo apt-get install -y htop
 # wireshark
 sudo apt install -y wireshark
 
+# meld
+sudo apt install -y meld
+
 
 echo ">>> All the tools installed correctly!"

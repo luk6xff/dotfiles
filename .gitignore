@@ -4,5 +4,5 @@ nvim_others/*
 nvim/nvim/*
 nvim/undodir/*
 lazygit*
-nerd-fonts*
+nerd-fonts
 
