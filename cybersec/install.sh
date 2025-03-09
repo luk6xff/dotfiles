@@ -21,8 +21,9 @@ python -m pip install --upgrade pwntools
 
 ### PACKAGES ###
 # GDB
-sudo apt install gdb
-sudo apt install gdb-multiarch
+sudo apt install -y gdb
+sudo apt install -y gdbserver
+sudo apt install -y gdb-multiarch
 
 
 
