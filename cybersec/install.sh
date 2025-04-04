@@ -34,8 +34,12 @@ cd ~/Tools
 git clone https://github.com/hugsy/gef.git ~/Tools/gef
 echo source ~/Tools/gef/gef.py >> ~/.gdbinit
 
+# Pwndbg
+git clone https://github.com/pwndbg/pwndbg ~/Tools/pwndbg
+cd ~/Tools/pwndbg && ./setup.sh
+
 # Imhex
-wget https://github.com/WerWolv/ImHex/releases/download/v1.36.2/imhex-1.36.2-x86_64.AppImage -P ~/Tools/
+cd ~/Tools && wget https://github.com/WerWolv/ImHex/releases/download/v1.36.2/imhex-1.36.2-x86_64.AppImage -P ~/Tools/
 chmod +x ~/Tools/imhex-*.AppImage
 
 # Ghidra
