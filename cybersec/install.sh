@@ -31,8 +31,8 @@ sudo apt install -y gdb-multiarch
 cd ~/Tools
 
 # GEF
-git clone https://github.com/hugsy/gef.git ~/Tools/gef
-echo source ~/Tools/gef/gef.py >> ~/.gdbinit
+# git clone https://github.com/hugsy/gef.git ~/Tools/gef
+# echo source ~/Tools/gef/gef.py >> ~/.gdbinit
 
 # Pwndbg
 git clone https://github.com/pwndbg/pwndbg ~/Tools/pwndbg
