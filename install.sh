@@ -29,6 +29,19 @@ else
   echo ">>>>>> Skipping SSH key generation."
 fi
 
+## Send public key to the VPS server
+read -p ">>>>>> Do you want to send the public key to the server? (y/N): " send_key
+if [ "$send_key" = "y" ] || [ "$send_key" = "Y" ]; then
+  # Prompt for the server address and username.
+  server_address='195.181.218.234'
+  server_username='root'
+
+  # Send the key onto the server.
+  ssh-copy-id -i ~/.ssh/id_ed25519.pub "$server_username@$server_address"
+else
+  echo ">>>>>> Skipping public key transfer."
+fi
+
 # Create directory tree.
 mkdir -p ~/Projects ~/Tools
 
