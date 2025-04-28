@@ -129,6 +129,5 @@ alias reload="source $HOME/.zshrc"
 
 # Add nvim to path
 export PATH=$PATH:/opt/nvim/
-export PATH=$PATH:/opt/nvim/
-export PATH=$PATH:/opt/nvim/
-export PATH=$PATH:/opt/nvim/
+export PATH="$PATH:${HOME}/.local/TokenUpdater"
+export POLYSPACE_INSTALLATION='/usr/local/Polyspace/R2024b'

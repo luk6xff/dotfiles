@@ -106,4 +106,13 @@
     "extensions.autoCheckUpdates": true,
 
     "extensions.ignoreRecommendations": true,
+
+    /// github.copilot
+    "github.copilot.enable": true,
+    "github.copilot.advanced": true,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "chat.agent.enabled": true,
+    "chat.agent.suggestedActions.enabled": true,
+    "chat.agent.suggestedActions.showInEditor": true,
+    /// plantuml extension
 }
