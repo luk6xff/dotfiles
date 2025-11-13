@@ -13,8 +13,6 @@ rm -f packages.microsoft.gpg
 sudo apt install -y apt-transport-https
 sudo apt update
 sudo apt install -y code
-# or
-#sudo snap install code --classic
 
 # settings
 ln -sfT ${SCRIPT_DIR}/settings.json /home/${USER}/.config/Code/User/settings.json
