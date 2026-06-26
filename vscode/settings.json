@@ -48,7 +48,7 @@
 
 
     // Workbench
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Visual Studio Dark",
 
     "workbench.startupEditor": "newUntitledFile",
 
@@ -101,34 +101,24 @@
 
 
     // Extensions
-    "extensions.autoUpdate": true,
+    "extensions.autoUpdate": "on",
 
     "extensions.autoCheckUpdates": true,
 
     "extensions.ignoreRecommendations": true,
 
     /// github.copilot
-    "github.copilot.enable": true,
-    "github.copilot.advanced": true,
+    "github.copilot.enable": {
+        "*": true
+    },
     "github.copilot.nextEditSuggestions.enabled": false,
     "chat.agent.enabled": true,
     "chat.agent.suggestedActions.enabled": true,
     "chat.agent.suggestedActions.showInEditor": true,
+    "chat.viewSessions.orientation": "stacked",
+
+    /// IntelliSense
+    "C_Cpp.intelliSenseEngine": "disabled",
     /// plantuml extension
     "plantuml.server": "https://plantuml.neo.volvocars.net/",
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-        "Cargo.toml": "Cargo.lock",
-        "*.sqlite": "${capture}.${extname}-*",
-        "*.db": "${capture}.${extname}-*",
-        "*.sqlite3": "${capture}.${extname}-*",
-        "*.db3": "${capture}.${extname}-*",
-        "*.sdb": "${capture}.${extname}-*",
-        "*.s3db": "${capture}.${extname}-*"
-    }
 }
